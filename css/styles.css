@@ -1,0 +1,245 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333; /* Dark gray text color */
+}
+
+/* Sticky Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #1976d2; /* Primary Blue */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+nav .logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #333; /* Dark Gray on Hover */
+    border-radius: 5px;
+}
+
+/* Change navbar background color on scroll */
+nav.sticky {
+    background-color: #1565c0; /* Slightly darker blue */
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #1976d2; /* Primary Blue */
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+    background-image: url('https://www.igtsolutions.com/wp-content/uploads/2024/09/JO-Trainer.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.hero-section h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-section p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* About Section */
+#about {
+    padding: 70px 20px;
+    background-color: #f4f4f4; /* Light gray background */
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 18px;
+    color: #333; /* Dark gray text color */
+    margin: 10px 0;
+}
+
+#about h3 {
+    font-size: 28px;
+    margin-top: 40px;
+}
+
+#about ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#about ul li {
+    font-size: 18px;
+    color: #555; /* Lighter gray for list items */
+    margin: 10px 0;
+}
+
+/* Courses Section */
+#courses {
+    background-color: #f9f9f9; /* Slightly off-white background */
+    padding: 70px 20px;
+    text-align: center;
+}
+
+#courses h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.category {
+    margin-bottom: 40px;
+}
+
+.category h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #1976d2; /* Primary Blue */
+}
+
+.course-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 30px;
+    width: 22%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: #1976d2; /* Primary Blue on hover */
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h3 {
+    font-size: 22px;
+    margin: 20px 0;
+}
+
+.card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.card ul li {
+    font-size: 16px;
+    color: #555; /* Lighter gray for list items */
+}
+
+/* Contact Section */
+#contact {
+    background-color: #66bb6a; /* Light Green */
+    padding: 70px 20px;
+    color: white;
+}
+
+#contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.address {
+    text-align: center;
+    font-size: 18px;
+}
+
+.address h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.address p {
+    margin-bottom: 10px;
+}
+
+.address strong {
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #212121; /* Dark Gray */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .course-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
